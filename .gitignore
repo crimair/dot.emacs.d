@@ -1,0 +1,8 @@
+*~
+url/
+eshell/
+abbrev_defs
+ac-comphist.dat
+auto-save-list
+elisp/elpa/*
+*.elc
