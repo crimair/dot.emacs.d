@@ -14,7 +14,7 @@
 (define-key ctl-q-map (kbd "8") (lambda () (interactive) (set-aurora-tab-width 8 t t)))
 
 ;;anything
-(global-set-key (kbd "C-x ;") 'anything)
+;(global-set-key (kbd "C-x ;") 'anything)
 
 ;;quickrun
 (global-set-key (kbd "<f5>") 'quickrun)

@@ -24,7 +24,7 @@
 	verilog-minimum-comment-distance 40
 	verilog-indent-begin-after-if    t
 	verilog-auto-lineup              'all
-	verilog-indent-lists             nil
+	verilog-indent-lists             t
 	verilog-highlight-modules        t
 	verilog-highlight-p1800-keywords nil
 	verilog-highlight-grouping-keywords t
