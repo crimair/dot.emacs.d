@@ -1,5 +1,6 @@
 (when linux-p
-  (push "/usr/share/emacs/site-lisp/anthy/" load-path)
+;  (push "/usr/share/emacs/site-lisp/anthy/" load-path)
+  (push "~/.emacs.d/elisp/linux_only/anthy/" load-path)
   (load-library "anthy")
 )
 

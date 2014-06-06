@@ -1,4 +1,4 @@
-;;;Last Change:2014/03/03 13:29.
+;;;Last Change:2014/06/06 16:13.
 (setq debug-on-error nil)
 
 ;;;;共通設定 
@@ -62,6 +62,6 @@
 (setq delete-auto-save-files t)
 
 ;;emacs-server
-(require 'searver)
+(require 'server)
 (unless (server-running-p)
   (server-start))
