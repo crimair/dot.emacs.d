@@ -25,18 +25,17 @@
 ;; set helm-command-prefix-key to "C-z"
 (progn
   (require 'helm-config)
-  (global-unset-key (kbd "C-z"))
+;  (global-unset-key (kbd "C-z"))
   (custom-set-variables
-   '(helm-command-prefix-key "C-z")))
+   '(helm-command-prefix-key "C-x ;")))
 
 ;; key settings
-(global-set-key (kbd "C-q") 'helm-mini)
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
-(global-set-key (kbd "C-x C-b") 'helm-buffers-list)
+(global-set-key (kbd "C-x C-b") 'helm-mini)
+;(global-set-key (kbd "C-x C-b") 'helm-buffers-list)
 (global-set-key (kbd "C-x ;") 'helm-recentf)
-
 (define-key helm-command-map (kbd "d") 'helm-descbinds)
 (define-key helm-command-map (kbd "g") 'helm-ag)
 (define-key helm-command-map (kbd "o") 'helm-occur)
