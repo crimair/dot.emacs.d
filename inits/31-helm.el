@@ -27,7 +27,7 @@
   (require 'helm-config)
 ;  (global-unset-key (kbd "C-z"))
   (custom-set-variables
-   '(helm-command-prefix-key "C-x ;")))
+   '(helm-command-prefix-key "C-x p")))
 
 ;; key settings
 (global-set-key (kbd "M-x") 'helm-M-x)
@@ -35,9 +35,10 @@
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (global-set-key (kbd "C-x C-b") 'helm-mini)
 ;(global-set-key (kbd "C-x C-b") 'helm-buffers-list)
-(global-set-key (kbd "C-x ;") 'helm-recentf)
-(define-key helm-command-map (kbd "d") 'helm-descbinds)
-(define-key helm-command-map (kbd "g") 'helm-ag)
+(global-set-key (kbd "C-x ;") 'helm-for-files)
+(define-key helm-command-map (kbd "d") 'helm-descbinds)    ;command prefix search
+(define-key helm-command-map (kbd "g") 'helm-ag)           ;current directory grep
+(define-key helm-command-map (kbd "h") 'helm-ag-this-file) ;current file grep
 (define-key helm-command-map (kbd "o") 'helm-occur)
 (define-key helm-command-map (kbd "y") 'yas/insert-snippet)
 (define-key helm-command-map (kbd "M-/") 'helm-dabbrev)

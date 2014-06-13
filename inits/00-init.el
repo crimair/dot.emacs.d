@@ -1,5 +1,6 @@
-;;;Last Change:2014/06/06 16:13.
+;;;Last Change:2014/06/09 10:40.
 (setq debug-on-error nil)
+;(setq debug-on-error t)
 
 ;;;;共通設定 
 ;;日本語環境の設定
@@ -22,6 +23,9 @@
 )
 (when nt-p
   (setq backup-directory "~/")
+)
+(when cygwin-p
+  (setq backup-directory "~/.back")
 )
 
 (if (and (boundp 'backup-directory)

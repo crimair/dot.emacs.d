@@ -1,4 +1,4 @@
-;;;Last Change:2014/06/06 17:13.
+;;;Last Change:2014/06/13 13:20.
 
 (require 'cl)
 
@@ -59,9 +59,11 @@
 	evil-paredit
 	evil-tabs
     helm
+    helm
     helm-ag
     helm-descbinds
     helm-ls-git
+	powerline-evil
     init-loader
     open-junk-file
     recentf-ext
@@ -105,20 +107,4 @@
 ;;init-loader
 (require 'init-loader)
 (init-loader-load "~/.emacs.d/inits")
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(blink-cursor-mode nil)
- '(column-number-mode t)
- '(helm-boring-file-regexp-list (quote ("~$" "\\.elc$")))
- '(helm-buffer-max-length 35)
- '(helm-command-prefix-key "C-z")
- '(helm-delete-minibuffer-contents-from-point t)
- '(helm-ff-skip-boring-files t)
- '(helm-ls-git-show-abs-or-relative (quote relative))
- '(helm-mini-default-sources (quote (helm-source-buffers-list helm-source-ls-git helm-source-recentf helm-source-buffer-not-found)))
- '(helm-truncate-lines t)
- '(show-paren-mode t)
- '(tool-bar-mode nil))
+

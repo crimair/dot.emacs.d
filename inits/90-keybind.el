@@ -19,9 +19,3 @@
 ;;quickrun
 (global-set-key (kbd "<f5>") 'quickrun)
 
-;;Japanese input
-(when linux-p
-  ;;anthy
-  (global-set-key (kbd "C-\\") 'anthy-mode)
-)
-
