@@ -1,4 +1,4 @@
-;;;Last Change:2014/06/13 13:20.
+;;;Last Change:2014/06/19 10:34.
 
 (require 'cl)
 
@@ -49,6 +49,7 @@
 	auto-async-byte-compile
     auto-complete
     cperl-mode
+;;微妙	crosshairs
     direx
 	evil
 	evil-indent-textobject
@@ -108,3 +109,23 @@
 (require 'init-loader)
 (init-loader-load "~/.emacs.d/inits")
 
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(helm-boring-file-regexp-list (quote ("~$" "\\.elc$")))
+ '(helm-buffer-max-length 35)
+ '(helm-command-prefix-key "C-x p")
+ '(helm-delete-minibuffer-contents-from-point t)
+ '(helm-ff-skip-boring-files t)
+ '(helm-ls-git-show-abs-or-relative (quote relative))
+ '(helm-mini-default-sources (quote (helm-source-buffers-list helm-source-ls-git helm-source-recentf helm-source-buffer-not-found)))
+ '(helm-truncate-lines t)
+ '(send-mail-function (quote sendmail-send-it)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

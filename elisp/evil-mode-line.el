@@ -33,32 +33,32 @@
 
 (defcustom evil-mode-line-color
   `((normal   . ,(face-background 'mode-line))
-    (insert   . "DeepSkyBlue4")
-    (replace  . "firebrick4")
-    (operator . "DarkSeaGreen4")
-    (visual   . "OrangeRed2")
-    (emacs    . "purple4"))
+    (insert   . "royal blue")
+    (replace  . "dark red")
+    (operator . "dark cyan")
+    (visual   . "dark orange")
+    (emacs    . "dark violet"))
   "Mode line color corresponds to Evil state."
   :type '(alist :key-type symbol :value-type string)
   :group 'evil-mode-line)
-(defcustom evil-normal-state-msg ""
+(defcustom evil-normal-state-msg " N "
   "Mode line message for Evil normal state."
   :type 'string
   :group 'evil-mode-line)
-(defcustom evil-insert-state-msg "INSERT"
+(defcustom evil-insert-state-msg " I "
   "Mode line message for Evil insert state."
   :type 'string
   :group 'evil-mode-line)
-(defcustom evil-replace-state-msg "REPLACE"
+(defcustom evil-replace-state-msg " R "
   "Mode line message for Evil replace state."
   :type 'string
   :group 'evil-mode-line)
-(defcustom evil-emacs-state-msg "x"
+(defcustom evil-emacs-state-msg " X "
   "Mode line message for Evil emacs state."
   :type 'string
   :group 'evil-mode-line)
 (defcustom evil-visual-state-msg-alist
-  '((normal . "VISUAL") (line . "VLINE") (block . "VBLOCK"))
+  '((normal . " V ") (line . "-V-") (block . "+V+"))
   "Mode line messages for Evil visual states."
   :type '(list (cons symbol string))
   :group 'evil-mode-line)

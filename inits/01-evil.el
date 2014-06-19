@@ -39,16 +39,84 @@
 (define-key evil-normal-state-map [backspace] 'evil-backward-char)
 (define-key evil-normal-state-map [delete] 'evil-backward-char)
 
-;(define-key evil-motion-state-map (kbd "n")
-;  (lambda()
-;	 ('evil-search-next)
-;	 ('evil-scroll-line-to-center)
-;	 )
-;)
-;(define-key evil-motion-state-map (kbd "N")
-;  (lambda()
-;	 ('evil-search-previous)
-;	 ('evil-scroll-line-to-center)
-;	 )
-;)
-;;*******************  setting for evil end
+;;input-method toggle for evil 
+;; normal-state       not-toggle
+;; exit-insert-state  force-off
+(defun evil-toggle-input-method ()
+      (interactive)
+	  (if (not (string= evil-state "insert"))
+		  ;;normal nado
+		  (if (not current-input-method)
+			  ()
+			  (toggle-input-method)
+			)
+		;;insert mode
+		(toggle-input-method)
+		)
+)
+(global-set-key (kbd "C-\\") 'evil-toggle-input-method)
+
+(defun evil-force-normal-state-imeoff ()
+      (interactive)
+	  (if (not current-input-method)
+			  ()
+		  (toggle-input-method)
+		)
+	  (evil-normal-state)
+)
+
+(define-key evil-normal-state-map [escape]  'evil-force-normal-state-imeoff)
+(define-key evil-insert-state-map [escape]  'evil-force-normal-state-imeoff)
+(define-key evil-replace-state-map [escape] 'evil-force-normal-state-imeoff)
+
+
+;;mark マークジャンプする場合に現在行を０にマークする。
+(defun evil-goto-mark-ex(char &optional noerror)
+      "goto-mark current line remember 0"
+      (interactive (list (read-char)))
+	  (if (/= char ?0)
+		  (evil-set-marker ?0)
+		)
+	  (evil-goto-mark char noerror)
+)
+(defun evil-goto-mark-line-ex(char &optional noerror)
+      "goto-mark current line remember 0"
+      (interactive (list (read-char)))
+	  (if (/= char ?0)
+		  (evil-set-marker ?0)
+		) 
+	  (evil-goto-mark-line char noerror)
+)
+(define-key evil-motion-state-map "`" 'evil-goto-mark-ex)
+(define-key evil-motion-state-map "'" 'evil-goto-mark-line-ex)
+
+;;検索語を画面中央に
+; vim nzz Nzz
+; search-moduleはevilにのみ対応
+(evil-define-motion evil-ex-search-next-zz (count)
+  :type exclusive
+  (evil-ex-search-next count)
+  (recenter)
+)
+(evil-define-motion evil-ex-search-previous-zz (count)
+  :type exclusive
+  (evil-ex-search-previous count)
+  (recenter)
+)
+
+(define-key evil-motion-state-map "n" 'evil-ex-search-next-zz)
+(define-key evil-motion-state-map "N" 'evil-ex-search-previous-zz)
+
+(defun t1 ()
+  (interactive)
+  (message "current-state:%s" evil-state)
+)
+(defun t2 ()
+  (interactive)
+  (message "current-input:%s" current-input-method)
+)
+(defun t3 ()
+  (interactive)
+  (message "current-input-method-title:%s" current-input-method-title)
+)
+;*******************  setting for evi end

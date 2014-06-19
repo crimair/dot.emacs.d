@@ -1,20 +1,23 @@
-;;;Last Change:2014/06/09 10:40.
+;;;Last Change:2014/06/19 09:40.
 (setq debug-on-error nil)
 ;(setq debug-on-error t)
 
-;;;;共通設定 
-;;日本語環境の設定
-(set-language-environment "Japanese")
-;;UTF-8 only
-(setq default-buffer-file-coding-system 'utf-8-unix)
-(set-buffer-file-coding-system 'utf-8-unix)
-(set-terminal-coding-system 'utf-8-unix)
-(set-keyboard-coding-system 'utf-8-unix)
-(set-clipboard-coding-system 'utf-8-unix)
-(prefer-coding-system 'utf-8-unix)
-(set-language-environment 'utf-8)
-(set-default-coding-systems 'utf-8-unix)
-(setq locale-coding-system 'utf-8)
+;;;;;共通設定 
+;;;日本語環境の設定
+;(set-language-environment "Japanese")
+;;;UTF-8 only
+;(setq default-buffer-file-coding-system 'utf-8-unix)
+;(set-buffer-file-coding-system 'utf-8-unix)
+;(set-terminal-coding-system 'utf-8-unix)
+;(set-keyboard-coding-system 'utf-8-unix)
+;(set-clipboard-coding-system 'utf-8-unix)
+;(prefer-coding-system 'utf-8-unix)
+;;(set-language-environment 'utf-8)
+;(set-default-coding-systems 'utf-8-unix)
+;(setq locale-coding-system 'utf-8)
+
+;;日本語入力環境
+(set-input-method "japanese")
 
 ;;;;backup setting
 (setq make-backup-files t)

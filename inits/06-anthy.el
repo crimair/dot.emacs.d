@@ -1,11 +1,12 @@
-(when linux-p
-;  (push "/usr/share/emacs/site-lisp/anthy/" load-path)
-  (push "~/.emacs.d/elisp/linux_only/anthy/" load-path)
-  (load-library "anthy")
-  ;;anthy
-  (global-set-key (kbd "C-\\") 'anthy-mode)
-)
-
+;(when linux-p
+;;  (push "/usr/share/emacs/site-lisp/anthy/" load-path)
+;  (push "~/.emacs.d/elisp/linux_only/anthy/" load-path)
+;  (load-library "anthy")
+;  ;;anthy
+;;  (global-set-key (kbd "C-\\") 'anthy-mjjode)
+;  (setq default-input-method "japanese-anthy")
+;)
+;
 ;(when windows-p
 ;;;;**
 ;(setq default-input-method "W32-IME")
