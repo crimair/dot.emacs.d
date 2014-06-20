@@ -1,4 +1,4 @@
-;;;Last Change:2014/06/19 10:34.
+;;;Last Change:2014/06/20 12:10.
 
 (require 'cl)
 
@@ -50,7 +50,6 @@
     auto-complete
     cperl-mode
 ;;微妙	crosshairs
-    direx
 	evil
 	evil-indent-textobject
 	evil-leader
@@ -88,6 +87,7 @@
 (defvar my-package-list2
   '(
 	flycheck
+	flycheck-pyflakes
 	jedi
     js2-mode
     magit

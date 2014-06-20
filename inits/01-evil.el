@@ -119,4 +119,22 @@
   (interactive)
   (message "current-input-method-title:%s" current-input-method-title)
 )
+
+;;Dired拡張
+(eval-after-load 'dired
+  '(progn
+     ;; use the standard Dired bindings as a base
+     (defvar dired-mode-map)
+     (evil-make-overriding-map dired-mode-map 'normal)
+     (evil-add-hjkl-bindings dired-mode-map 'normal
+       "J" 'dired-goto-file                   ; "j"
+       "K" 'dired-do-kill-lines               ; "k"
+       "r" 'dired-do-redisplay                ; "l"
+;;extend start
+       "y" 'evil-yank         ; "for yank"
+       "G" 'evil-goto-line    ; "for 1G"
+;;extend end
+       ;; ":d", ":v", ":s", ":e"
+       ";" (lookup-key dired-mode-map ":"))))
+
 ;*******************  setting for evi end

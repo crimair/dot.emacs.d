@@ -21,5 +21,9 @@
   (setq web-mode-script-offset 2)
   (setq web-mode-php-offset    2)
   (setq web-mode-java-offset   2)
-  (setq web-mode-asp-offset    2))
+  (setq web-mode-asp-offset    2)
+(when emacs24-p
+             (flycheck-mode)			  ; flycheck on
+)
+)
 (add-hook 'web-mode-hook 'web-mode-hook)

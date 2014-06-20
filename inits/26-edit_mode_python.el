@@ -3,6 +3,8 @@
           '(lambda ()
              (setq indent-tabs-mode nil)
              (setq py-indent-offset 4)
-			 (flymake-python-pyflakes-load)
+(when emacs24-p
+			 (flycheck-mode)
+)
 			 )
   )

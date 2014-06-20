@@ -7,7 +7,10 @@
 (add-hook 'verilog-mode-hook
 		  '(lambda ()
 			 (font-lock-mode t)
-             (setq indent-tabs-mode t)     ; インデントはTAB
+             (setq indent-tabs-mode t)    ; インデントはTAB
+(when emacs24-p
+             (flycheck-mode)			  ; flycheck on
+)
 			 ))
 (setq 
 	verilog-indent-level             4
