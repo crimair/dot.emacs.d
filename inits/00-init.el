@@ -1,4 +1,4 @@
-;;;Last Change:2014/06/19 09:40.
+;;;Last Change:2014/06/23 13:35.
 (setq debug-on-error nil)
 ;(setq debug-on-error t)
 
@@ -50,7 +50,7 @@
 (global-auto-revert-mode 1)
 
 ;; タイトルバーにファイル名を表示する
-(setq frame-title-format (format "emacs@%s : %%f" (system-name)))
+(setq frame-title-format (format "%%f" (system-name)))
 
 ;;右端で折り返さない
 ;;通常のウィンドウ用の設定

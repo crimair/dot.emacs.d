@@ -6,6 +6,8 @@
 ; evil-search-module `isearch ;search module isearch
  evil-regexp-search t    ;search regexp use
  evil-search-wrap   t    ;search wrap
+; evil-find-skip-newlines t
+ evil-shift-width 4
 )
 
 ;; enable evil(setq c-tab-always-indent nil)
@@ -56,18 +58,32 @@
 )
 (global-set-key (kbd "C-\\") 'evil-toggle-input-method)
 
+(defun evil-ime-clear ()
+      (interactive)
+	  (message "ime-clear")
+)
+
 (defun evil-force-normal-state-imeoff ()
       (interactive)
 	  (if (not current-input-method)
 			  ()
-		  (toggle-input-method)
+		 (toggle-input-method)
 		)
-	  (evil-normal-state)
+	(evil-ime-clear)
+	(evil-normal-state)
 )
 
+;;default escape key (to normal state)
+;;anthy変換時のばかよけ
+;(global-set-key [escape]					'evil-global-force-normal-state)
+(global-set-key [escape]					'evil-force-normal-state-imeoff)
+;(global-set-key [escape]					'evil-normal-state)
+;;reload escape key (evil-maps.el)
 (define-key evil-normal-state-map [escape]  'evil-force-normal-state-imeoff)
 (define-key evil-insert-state-map [escape]  'evil-force-normal-state-imeoff)
 (define-key evil-replace-state-map [escape] 'evil-force-normal-state-imeoff)
+(define-key evil-ex-completion-map [escape] 'abort-recursive-edit)
+(define-key evil-visual-state-map [escape]  'evil-exit-visual-state)
 
 
 ;;mark マークジャンプする場合に現在行を０にマークする。

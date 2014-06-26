@@ -6,8 +6,8 @@
 
 (when linux-p
 ;	(set-face-attribute 'default nil :family "Inconsolata" :height 150)
-;	(set-face-attribute 'default nil :family "Migu 1M" :height 150 :spacing 0)
-	(set-face-attribute 'default nil :family "Monospace" :height 120 :spacing 0)
+;	(set-face-attribute 'default nil :family "Migu 1M" :height 150)
+	(set-face-attribute 'default nil :family "Monospace" :height 105 :weight bold :width 100)
 	(set-fontset-font
 		 nil 'japanese-jisx0208
 		 (font-spec :family "Migu 1M"))

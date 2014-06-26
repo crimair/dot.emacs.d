@@ -1,4 +1,4 @@
-;;;Last Change:2014/06/20 12:10.
+;;;Last Change:2014/06/25 17:29.
 
 (require 'cl)
 
@@ -114,6 +114,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(blink-cursor-mode nil)
+ '(column-number-mode t)
  '(helm-boring-file-regexp-list (quote ("~$" "\\.elc$")))
  '(helm-buffer-max-length 35)
  '(helm-command-prefix-key "C-x p")
@@ -122,10 +124,12 @@
  '(helm-ls-git-show-abs-or-relative (quote relative))
  '(helm-mini-default-sources (quote (helm-source-buffers-list helm-source-ls-git helm-source-recentf helm-source-buffer-not-found)))
  '(helm-truncate-lines t)
- '(send-mail-function (quote sendmail-send-it)))
+ '(send-mail-function (quote sendmail-send-it))
+ '(show-paren-mode t)
+ '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(default ((t (:family "DejaVu LGC Sans Mono" :foundry "unknown" :slant normal :weight bold :height 116 :width normal)))))
