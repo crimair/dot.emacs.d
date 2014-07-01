@@ -33,6 +33,11 @@
 			 (setq vhdl-highlight-translate-off t)
 			 (setq vhdl-highlight-verilog-keywords t)
 			 (setq vhdl-indent-tabs-mode nil)
+			 (setq end-comment-column nil)
+			 (setq vhdl-compiler "Modelsim")
+			 (setq time-stamp-start "-- Last update : ")
+			 (setq time-stamp-format "%:y/%02m/%02d")
+			 (setq time-stamp-end "\\.")
 			 ))
 ;             (setq indent-tabs-mode t)     ; インデントはTAB
 ;(setq 

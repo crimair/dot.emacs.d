@@ -1,4 +1,4 @@
-;;;Last Change:2014/06/25 17:29.
+;;;Last Change:2014/06/26 16:41.
 
 (require 'cl)
 
@@ -127,9 +127,21 @@
  '(send-mail-function (quote sendmail-send-it))
  '(show-paren-mode t)
  '(tool-bar-mode nil))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(default ((t (:family "DejaVu LGC Sans Mono" :foundry "unknown" :slant normal :weight bold :height 116 :width normal)))))
+;(custom-set-faces
+; ;; custom-set-faces was added by Custom.
+; ;; If you edit it by hand, you could mess it up, so be careful.
+; ;; Your init file should contain only one such instance.
+; ;; If there is more than one, they won't work right.
+; '(default ((t (:family "DejaVu LGC Sans Mono" :foundry "unknown" :slant normal :weight bold :height 116 :width normal)))))
+;(custom-set-faces
+; ;; custom-set-faces was added by Custom.
+; ;; If you edit it by hand, you could mess it up, so be careful.
+; ;; Your init file should contain only one such instance.
+; ;; If there is more than one, they won't work right.
+; '(default ((t (:family "Migu 1M" :foundry "unknown" :slant normal :weight normal :height 116 :width normal :spacing 100)))))
+;(custom-set-faces
+; ;; custom-set-faces was added by Custom.
+; ;; If you edit it by hand, you could mess it up, so be careful.
+; ;; Your init file should contain only one such instance.
+; ;; If there is more than one, they won't work right.
+; '(default ((t (:family "Migu 1M" :foundry "unknown" :slant normal :weight normal :height 116 :width normal :spacing 100)))))

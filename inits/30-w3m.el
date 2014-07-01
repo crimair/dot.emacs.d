@@ -1,2 +1,26 @@
 ;text browser w3m
 (require 'w3m)
+
+
+(add-hook 'w3m-mode-hook
+          '(lambda ()
+;			 (set-face-foreground 'default "gray40")
+			 (set-face-foreground 'w3m-anchor-face "gray40")
+			 (set-face-background 'w3m-anchor-face "gray70")
+			 (set-face-foreground 'w3m-arrived-anchor-face "gray40")
+			 (set-face-background 'w3m-arrived-anchor-face "gray70")
+			 (set-face-foreground 'w3m-image-face "gray40")
+			 (set-face-background 'w3m-image-face "gray70")
+			 (define-key w3m-mode-map (kbd "C-f") 'evil-scroll-page-down)
+			 (define-key w3m-mode-map (kbd "C-b") 'evil-scroll-page-up)
+			 (define-key w3m-mode-map (kbd "C-l") #'evil-window-right)
+			 (define-key w3m-mode-map (kbd "C-h") #'evil-window-left)
+			 (define-key w3m-mode-map (kbd "C-j") #'evil-window-down)
+			 (define-key w3m-mode-map (kbd "C-k") #'evil-window-up)
+			 (text-scale-set 1)
+			 (text-scale-decrease 2)
+			 (setq w3m-tab-width 2)
+			 (setq w3m-use-title-buffer-name t)
+			 (setq w3m-weather-default-area "滋賀県・南部")
+			 )
+  )
