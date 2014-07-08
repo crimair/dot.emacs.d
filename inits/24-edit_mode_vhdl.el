@@ -15,6 +15,11 @@
 ;;			 (setq vhdl-highlight-translate-off t)
 ;;			 (setq vhdl-highlight-verilog-keywords t)
 ;;			 (setq vhdl-indent-tabs-mode t)
+;;(when emacs24-p
+;;  (when linux-p
+;;	(flycheck-mode)			  ; flycheck on for linux only
+;;	)
+;;)
 ;;			 ))
 ;;;             (setq indent-tabs-mode t)     ; インデントはTAB
 ;;;(setq 
@@ -38,6 +43,11 @@
 			 (setq time-stamp-start "-- Last update : ")
 			 (setq time-stamp-format "%:y/%02m/%02d")
 			 (setq time-stamp-end "\\.")
+(when emacs24-p
+  (when linux-p
+	(flycheck-mode)			  ; flycheck on for linux only
+	)
+)
 			 ))
 ;             (setq indent-tabs-mode t)     ; インデントはTAB
 ;(setq 

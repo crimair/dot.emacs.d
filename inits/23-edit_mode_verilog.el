@@ -9,7 +9,9 @@
 			 (font-lock-mode t)
              (setq indent-tabs-mode t)    ; インデントはTAB
 (when emacs24-p
-             (flycheck-mode)			  ; flycheck on
+  (when linux-p
+	(flycheck-mode)			  ; flycheck on for linux only
+	)
 )
 			 ))
 (setq 
@@ -35,8 +37,3 @@
 	verilog-date-scientific-format t
 	verilog-company (getenv "COMPANY")
 )	
-;	verilog-linter			 "my_lint_shell_command")
-
-;;align
-;; C-c TAB
-;; C-c =
