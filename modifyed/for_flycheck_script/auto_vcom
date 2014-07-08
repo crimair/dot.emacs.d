@@ -1,0 +1,12 @@
+#!/bin/sh
+
+if [ -z "$*" ] ; then
+  exec vcom 
+else
+  defwork=$1/work
+  shift
+  if [ ! -d $defwork ] ; then
+    vlib $defwork
+  fi
+  exec vcom  -work $defwork "$@"
+fi

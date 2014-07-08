@@ -1,0 +1,12 @@
+#!/bin/sh
+
+if [ -z "$*" ] ; then
+  exec vlog 
+else
+  defwork=$1/work
+  shift
+  if [ ! -d $defwork ] ; then
+    vlib $defwork
+  fi
+  exec vlog  -work $defwork "$@"
+fi
