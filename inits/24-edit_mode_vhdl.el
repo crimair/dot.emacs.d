@@ -18,6 +18,7 @@
 ;;(when emacs24-p
 ;;  (when linux-p
 ;;	(flycheck-mode)			  ; flycheck on for linux only
+;;	(git-gutter-mode)
 ;;	)
 ;;)
 ;;			 ))
@@ -46,6 +47,7 @@
 (when emacs24-p
   (when linux-p
 	(flycheck-mode)			  ; flycheck on for linux only
+	(git-gutter-mode)
 	)
 )
 			 ))
