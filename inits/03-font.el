@@ -60,17 +60,19 @@
                     :height 105)
 (set-fontset-font (frame-parameter nil 'font)
                   'japanese-jisx0208
-                  (cons "Migu 1M" "iso10646-1"))
+                  (cons "Ricty" "iso10646-1"))
 (set-fontset-font (frame-parameter nil 'font)
                   'japanese-jisx0212
-                  (cons "Migu 1M" "iso10646-1"))
+                  (cons "Ricty" "iso10646-1"))
 (set-fontset-font (frame-parameter nil 'font)
                   'katakana-jisx0201
-                  (cons "Migu 1M" "iso10646-1"))
+                  (cons "Ricty" "iso10646-1"))
 
 (setq face-font-rescale-alist
       '(
-("Migu 1M.*" . 1.2)
+;("Migu 1M.*" . 1.2)
+;("Migu 2M.*" . 1.2)
+("Ricty.*" . 1.2)
 	))
 )
 
