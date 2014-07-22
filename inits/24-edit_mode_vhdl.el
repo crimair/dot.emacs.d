@@ -47,11 +47,6 @@
 (when emacs24-p
   (when linux-p
 	(flycheck-mode)			  ; flycheck on for linux only
-	(git-gutter-mode)
 	)
 )
 			 ))
-;             (setq indent-tabs-mode t)     ; インデントはTAB
-;(setq 
-; (vhdl-indent-tabs-mode t)  ;;indent tab
-;)	

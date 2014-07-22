@@ -1,33 +1,76 @@
-;;;;見た目
-;(when linux-p
-;  (custom-set-faces
-;   '(default ((t (:family "Migu 1M" :foundry "unknown" :slant normal :weight normal :height 120 :width normal)))))
-;)
+;; フォント
+;; abcdefghijklmnopqrstuvwxyz 
+;; ABCDEFGHIJKLMNOPQRSTUVWXYZ
+;; `1234567890-=\[];',./
+;; ~!@#$%^&*()_+|{}:"<>?
+;;
+;; 壱弐参四五壱弐参四五壱弐参四五壱弐参四五壱弐参四五壱弐参四五壱弐参四五壱弐参四五壱弐参四五壱弐参四五壱弐参四五壱弐参四五
+;; 123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890
+;; ABCdeＡＢＣｄｅ
+;;
+;; ┌─────────────────────────────┐
+;; │　　　　　　　　　　　　　罫線                            │
+;; └─────────────────────────────┘
+;;
 
 (when linux-p
-;	(set-face-attribute 'default nil :family "Inconsolata" :height 150)
-;	(set-face-attribute 'default nil :family "Migu 1M" :height 105 :spacing 100)
-	(set-face-attribute 'default nil :family "Monospace" :height 115 :bold :weight )
-	(set-fontset-font
-		 nil 'japanese-jisx0208
-		 (font-spec :family "Migu 1M"))
+(set-face-attribute 'default nil
+                    :family "Meslo LG M"
+                    :height 105)
+(set-fontset-font (frame-parameter nil 'font)
+                  'japanese-jisx0208
+                  (cons "Ricty" "iso10646-1"))
+(set-fontset-font (frame-parameter nil 'font)
+                  'japanese-jisx0212
+                  (cons "Ricty" "iso10646-1"))
+(set-fontset-font (frame-parameter nil 'font)
+                  'katakana-jisx0201
+                  (cons "Ricty" "iso10646-1"))
 
+(setq face-font-rescale-alist
+      '(
+;("Migu 1M.*" . 1.2)
+;("Migu 2M.*" . 1.2)
+("Ricty.*" . 1.2)
+	))
 )
-(when windows-p
-;	(set-face-attribute 'default nil :family "Migu 1M" :height 150)
-;	(set-face-attribute 'default nil :family "Source Code Pro" :height 125)
-	(set-face-attribute 'default nil :family "Inconsolata" :height 125)
-	(set-fontset-font
-		 nil 'japanese-jisx0208
-		 (font-spec :family "Migu 1M"))
 
+(when windows-p
+(set-face-attribute 'default nil
+                    :family "Meslo LG M"
+                    :height 105)
+(set-fontset-font (frame-parameter nil 'font)
+                  'japanese-jisx0208
+                  (cons "Migu 1M" "iso10646-1"))
+(set-fontset-font (frame-parameter nil 'font)
+                  'japanese-jisx0212
+                  (cons "Migu 1M" "iso10646-1"))
+(set-fontset-font (frame-parameter nil 'font)
+                  'katakana-jisx0201
+                  (cons "Migu 1M" "iso10646-1"))
+
+(setq face-font-rescale-alist
+      '(
+("Migu 1M.*" . 1.2)
+	))
 )
 (when cygwin-p
-;	(set-face-attribute 'default nil :family "Migu 1M" :height 150)
-	(set-face-attribute 'default nil :family "Inconsolata" :height 160)
-	(set-fontset-font
-		 nil 'japanese-jisx0208
-		 (font-spec :family "Migu 1M"))
+(set-face-attribute 'default nil
+                    :family "Meslo LG M"
+                    :height 105)
+(set-fontset-font (frame-parameter nil 'font)
+                  'japanese-jisx0208
+                  (cons "Migu 1M" "iso10646-1"))
+(set-fontset-font (frame-parameter nil 'font)
+                  'japanese-jisx0212
+                  (cons "Migu 1M" "iso10646-1"))
+(set-fontset-font (frame-parameter nil 'font)
+                  'katakana-jisx0201
+                  (cons "Migu 1M" "iso10646-1"))
 
+(setq face-font-rescale-alist
+      '(
+("Migu 1M.*" . 1.2)
+	))
 )
 

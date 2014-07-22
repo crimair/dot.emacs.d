@@ -7,11 +7,10 @@
 (add-hook 'verilog-mode-hook
 		  '(lambda ()
 			 (font-lock-mode t)
-             (setq indent-tabs-mode t)    ; インデントはTAB
+             (setq indent-tabs-mode nil)    ; インデントはspace
 (when emacs24-p
   (when linux-p
 	(flycheck-mode)			  ; flycheck on for linux only
-	(git-gutter-mode)
 	)
 )
 			 ))
@@ -25,7 +24,7 @@
 	verilog-cexp-indent				 4	
 	verilog-auto-newline             nil
 	verilog-auto-indent-on-newline   nil
-	verilog-tab-always-indent        t
+	verilog-tab-always-indent        nil
 	verilog-auto-endcomments         t
 	verilog-minimum-comment-distance 40
 	verilog-indent-begin-after-if    t

@@ -1,4 +1,4 @@
-;;;Last Change:2014/06/26 16:41.
+;;;Last Change:2014/07/16 10:00.
 
 (require 'cl)
 
@@ -58,6 +58,7 @@
 	evil-numbers
 	evil-paredit
 	evil-tabs
+	git-commit-mode
     helm
     helm
     helm-ag
@@ -88,7 +89,7 @@
   '(
 	flycheck
 	flycheck-pyflakes
-	git-gutter-fringe	
+	git-gutter
 	jedi
     js2-mode
     magit
@@ -109,40 +110,3 @@
 ;;init-loader
 (require 'init-loader)
 (init-loader-load "~/.emacs.d/inits")
-
-;(custom-set-variables
-; ;; custom-set-variables was added by Custom.
-; ;; If you edit it by hand, you could mess it up, so be careful.
-; ;; Your init file should contain only one such instance.
-; ;; If there is more than one, they won't work right.
-; '(blink-cursor-mode nil)
-; '(column-number-mode t)
-; '(helm-boring-file-regexp-list (quote ("~$" "\\.elc$")))
-; '(helm-buffer-max-length 35)
-; '(helm-command-prefix-key "C-x p")
-; '(helm-delete-minibuffer-contents-from-point t)
-; '(helm-ff-skip-boring-files t)
-; '(helm-ls-git-show-abs-or-relative (quote relative))
-; '(helm-mini-default-sources (quote (helm-source-buffers-list helm-source-ls-git helm-source-recentf helm-source-buffer-not-found)))
-; '(helm-truncate-lines t)
-; '(send-mail-function (quote sendmail-send-it))
-; '(show-paren-mode t)
-; '(tool-bar-mode nil))
-;(custom-set-faces
-; ;; custom-set-faces was added by Custom.
-; ;; If you edit it by hand, you could mess it up, so be careful.
-; ;; Your init file should contain only one such instance.
-; ;; If there is more than one, they won't work right.
-; '(default ((t (:family "DejaVu LGC Sans Mono" :foundry "unknown" :slant normal :weight bold :height 116 :width normal)))))
-;(custom-set-faces
-; ;; custom-set-faces was added by Custom.
-; ;; If you edit it by hand, you could mess it up, so be careful.
-; ;; Your init file should contain only one such instance.
-; ;; If there is more than one, they won't work right.
-; '(default ((t (:family "Migu 1M" :foundry "unknown" :slant normal :weight normal :height 116 :width normal :spacing 100)))))
-;(custom-set-faces
-; ;; custom-set-faces was added by Custom.
-; ;; If you edit it by hand, you could mess it up, so be careful.
-; ;; Your init file should contain only one such instance.
-; ;; If there is more than one, they won't work right.
-; '(default ((t (:family "Migu 1M" :foundry "unknown" :slant normal :weight normal :height 116 :width normal :spacing 100)))))
