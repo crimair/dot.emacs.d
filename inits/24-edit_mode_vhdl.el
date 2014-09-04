@@ -31,7 +31,7 @@
 (add-hook 'vhdl-mode-hook
 	'(lambda ()
 			 (font-lock-mode t)
-			 (setq vhdl-basic-offset  2)        ;indent 4
+			 (setq vhdl-basic-offset  4)        ;indent 4
 			 (setq vhdl-electric-mode nil)      ;auto template mode off
 			 (setq vhdl-highlight-case-sensitive t)
 			 (setq vhdl-highlight-forbidden-words t)

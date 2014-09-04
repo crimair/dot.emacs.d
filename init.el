@@ -1,4 +1,4 @@
-;;;Last Change:2014/07/16 10:00.
+;;;Last Change:2014/08/29 17:11.
 
 (require 'cl)
 
@@ -58,6 +58,7 @@
 	evil-numbers
 	evil-paredit
 	evil-tabs
+	evil-surround
 	git-commit-mode
     helm
     helm
@@ -67,6 +68,7 @@
 	powerline-evil
     init-loader
     open-junk-file
+	php-mode
     recentf-ext
 	quickrun
 	w3m

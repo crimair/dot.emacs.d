@@ -153,4 +153,7 @@
        ;; ":d", ":v", ":s", ":e"
        ";" (lookup-key dired-mode-map ":"))))
 
+;;surround.vim
+(require 'evil-surround)
+(global-evil-surround-mode 1)
 ;*******************  setting for evi end
