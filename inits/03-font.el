@@ -38,7 +38,7 @@
 (when windows-p
 (set-face-attribute 'default nil
                     :family "Meslo LG M"
-                    :height 105)
+                    :height 115)
 (set-fontset-font (frame-parameter nil 'font)
                   'japanese-jisx0208
                   (cons "Migu 1M" "iso10646-1"))

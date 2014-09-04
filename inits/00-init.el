@@ -1,8 +1,8 @@
-;;;Last Change:2014/06/23 13:35.
+;;;Last Change:2014/09/04 13:22.
 (setq debug-on-error nil)
 ;(setq debug-on-error t)
 
-;;;;;共通設定 
+;;;;;共通設定
 ;;;日本語環境の設定
 ;(set-language-environment "Japanese")
 ;;;UTF-8 only
@@ -38,8 +38,8 @@
             (symbol-function 'make-backup-file-name))
       (defun make-backup-file-name (filename)
         (if (file-directory-p (expand-file-name backup-directory))
-            (concat (expand-file-name backup-directory) 
-                    "/" (file-name-nondirectory filename) "~" 
+            (concat (expand-file-name backup-directory)
+                    "/" (file-name-nondirectory filename) "~"
 		    (format-time-string "%y%m%d-%T") "~")
           (make-backup-file-name-original filename)))))
 
@@ -67,6 +67,9 @@
 
 ;;; 終了時にオートセーブファイルを消す
 (setq delete-auto-save-files t)
+
+; インデントはspace
+(setq indent-tabs-mode nil)
 
 ;;emacs-server
 (require 'server)
