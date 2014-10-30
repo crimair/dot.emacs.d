@@ -1,4 +1,4 @@
-;;;Last Change:2014/08/29 17:11.
+;;;Last Change:2014/10/30 11:07:44 (matsukura)
 
 (require 'cl)
 
@@ -8,9 +8,9 @@
 
 ;; system-type predicates
 (setq 
-	  emacs23-p (<= emacs-major-version 23)
-	  emacs24-p (>= emacs-major-version 24)
-	  darwin-p (eq system-type 'darwin)
+      emacs23-p (<= emacs-major-version 23)
+      emacs24-p (>= emacs-major-version 24)
+      darwin-p (eq system-type 'darwin)
       ns-p (featurep 'ns)
       carbon-p (eq window-system 'mac)
       linux-p (eq system-type 'gnu/linux)
@@ -46,35 +46,38 @@
 ;; install if not installed
 (defvar my-package-list
   '(
-	auto-async-byte-compile
+    auto-async-byte-compile
     auto-complete
     cperl-mode
-;;微妙	crosshairs
-	evil
-	evil-indent-textobject
-	evil-leader
-	evil-matchit
-	evil-nerd-commenter
-	evil-numbers
-	evil-paredit
-	evil-tabs
-	evil-surround
-	git-commit-mode
+;;微妙  crosshairs
+    evil
+    evil-indent-textobject
+    evil-leader
+    evil-matchit
+    evil-nerd-commenter
+    evil-numbers
+    evil-paredit
+    evil-tabs
+;    evil-org
+    evil-jumper
+    evil-surround
+    evil-visualstar
+    git-commit-mode
     helm
     helm
     helm-ag
     helm-descbinds
     helm-ls-git
-	powerline-evil
+    powerline-evil
     init-loader
     open-junk-file
-	php-mode
+    php-mode
     recentf-ext
-	quickrun
-	w3m
-	web-mode
+    quickrun
+    w3m
+    web-mode
     yasnippet
-	))
+    ))
 
 (let ((not-installed
        (loop for package in my-package-list
@@ -89,15 +92,15 @@
 (when emacs24-p
 (defvar my-package-list2
   '(
-	flycheck
-	flycheck-pyflakes
-	git-gutter
-	jedi
+    flycheck
+    flycheck-pyflakes
+    git-gutter
+    jedi
     js2-mode
     magit
     markdown-mode
     ruby-mode
-	))
+    ))
 
 (let ((not-installed
        (loop for package in my-package-list2

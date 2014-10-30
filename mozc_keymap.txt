@@ -1,0 +1,62 @@
+status	key	command
+Composition	Backspace	Backspace
+Composition	Ctrl a	MoveCursorToBeginning
+Composition	Ctrl Backspace	Backspace
+Composition	Ctrl e	MoveCursorToEnd
+Composition	Ctrl f	Commit
+Composition	Ctrl k	MoveCursorLeft
+Composition	Ctrl l	MoveCursorRight
+Composition	Ctrl Shift Space	InsertFullSpace
+Composition	Ctrl Space	InsertHalfSpace
+Composition	Ctrl g	Cancel
+Composition	Delete	Delete
+Composition	ESC	Cancel
+Composition	F10	ConvertToHalfAlphanumeric
+Composition	F2	ConvertWithoutHistory
+Composition	F6	ConvertToHiragana
+Composition	F7	ConvertToFullKatakana
+Composition	F8	ConvertToHalfWidth
+Composition	F9	ConvertToFullAlphanumeric
+Composition	Home	MoveCursorToBeginning
+Composition	Left	MoveCursorLeft
+Composition	Right	MoveCursorRight
+Composition	Space	Convert
+Conversion	Backspace	Cancel
+Conversion	Ctrl a	SegmentFocusFirst
+Conversion	Ctrl n	ConvertNext
+Conversion	Ctrl f	Commit
+Conversion	Ctrl g	Cancel
+Conversion	Ctrl o	SegmentWidthShrink
+Conversion	Ctrl i	SegmentWidthExpand
+Conversion	Ctrl p	ConvertNext
+Conversion	Delete	Cancel
+Conversion	Down	ConvertNext
+Conversion	Enter	Commit
+Conversion	ESC	Cancel
+Conversion	F10	ConvertToHalfAlphanumeric
+Conversion	F6	ConvertToHiragana
+Conversion	F7	ConvertToFullKatakana
+Conversion	F8	ConvertToHalfWidth
+Conversion	F9	ConvertToFullAlphanumeric
+Conversion	Home	SegmentFocusFirst
+Conversion	Left	SegmentFocusLeft
+Conversion	Right	SegmentFocusRight
+Conversion	Space	ConvertNext
+Conversion	Tab	PredictAndConvert
+Conversion	Up	ConvertPrev
+Conversion	Ctrl l	SegmentFocusRight
+Conversion	Ctrl k	SegmentFocusLeft
+Conversion	Ctrl e	SegmentFocusLast
+Composition	ASCII	InsertCharacter
+Composition	Kanji	IMEOff
+Composition	OFF	IMEOff
+Composition	ON	IMEOn
+Conversion	Kanji	IMEOff
+Conversion	OFF	IMEOff
+Conversion	ON	IMEOn
+DirectInput	Kanji	IMEOn
+DirectInput	ON	IMEOn
+Precomposition	ASCII	InsertCharacter
+Precomposition	Kanji	IMEOff
+Precomposition	OFF	IMEOff
+Precomposition	ON	IMEOn

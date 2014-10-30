@@ -16,9 +16,6 @@
 ;;anything
 ;(global-set-key (kbd "C-x ;") 'anything)
 
-;;quickrun
-(global-set-key (kbd "<f5>") 'quickrun)
-
 ;;C-x C-d list-directory -> dired
 ;よく間違えるので割当を変更する
 (global-set-key (kbd "C-x C-d") `dired)

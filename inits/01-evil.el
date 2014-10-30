@@ -37,6 +37,10 @@
 (define-key evil-normal-state-map (kbd "C-j") #'evil-window-down)
 (define-key evil-normal-state-map (kbd "C-k") #'evil-window-up)
 
+;;buffer control
+(define-key evil-normal-state-map (kbd "M-n") #'evil-next-buffer)
+(define-key evil-normal-state-map (kbd "M-p") #'evil-prev-buffer)
+
 ;;normal state backspace key 
 (define-key evil-normal-state-map [backspace] 'evil-backward-char)
 (define-key evil-normal-state-map [delete] 'evil-backward-char)
@@ -156,4 +160,7 @@
 ;;surround.vim
 (require 'evil-surround)
 (global-evil-surround-mode 1)
+
+(require 'evil-jumper)
+(require 'evil-visualstar)
 ;*******************  setting for evi end

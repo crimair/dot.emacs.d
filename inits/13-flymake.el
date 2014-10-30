@@ -33,6 +33,7 @@
   (add-to-list 'flycheck-checkers 'verilog-vlog)
 
 
+  ;; My-php
   (flycheck-define-checker my-php
 	"A PHP syntax checker using the PHP command line interpreter.
 
@@ -47,6 +48,7 @@
 
   )
 
+  ;C/C++ gcc modify
 (flycheck-define-checker c/c++-gcc
   "A C/C++ syntax checker using GCC.
 

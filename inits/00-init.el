@@ -1,4 +1,4 @@
-;;;Last Change:2014/09/04 13:22.
+;;;Last Change:2014/10/24 14:39:15 (matsukura)
 (setq debug-on-error nil)
 ;(setq debug-on-error t)
 
@@ -43,6 +43,11 @@
 		    (format-time-string "%y%m%d-%T") "~")
           (make-backup-file-name-original filename)))))
 
+;;毎回バックアップ
+(defun force-backup-of-buffer ()
+  (setq buffer-backed-up nil))
+(add-hook 'before-save-hook  'force-backup-of-buffer)
+
 ;;透明化
 ;;(add-to-list 'default-frame-alist '(alpha , 85))
 
@@ -70,6 +75,10 @@
 
 ; インデントはspace
 (setq indent-tabs-mode nil)
+
+;;buffer name unique
+(require 'uniquify)
+(setq uniquify-buffer-name-style 'post-forward-angle-brackets)
 
 ;;emacs-server
 (require 'server)
