@@ -64,10 +64,9 @@
     evil-visualstar
     git-commit-mode
     helm
-    helm
     helm-ag
     helm-descbinds
-    helm-ls-git
+;ugokanai.150330    helm-ls-git
     powerline-evil
     init-loader
     open-junk-file

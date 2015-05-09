@@ -80,6 +80,10 @@
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'post-forward-angle-brackets)
 
+;;undo-limit
+(setq undo-limit 100000)
+(setq undo-strong-limit 130000)
+
 ;;emacs-server
 (require 'server)
 (unless (server-running-p)

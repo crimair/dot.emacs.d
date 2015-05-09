@@ -4,6 +4,7 @@
   '(lambda ()
    (font-lock-mode t)
    (setq indent-tabs-mode nil)    ; インデントはspace
+))
 
 (setq  org-export-latex-classes '())
 (add-to-list 'org-export-latex-classes
@@ -13,6 +14,7 @@
 \\usepackage[T1]{fontenc}
 \\usepackage{fixltx2e}
 \\usepackage[dvipdfmx]{graphicx}
+\\usepackage[dvipdfmx]{color}
 \\usepackage{longtable}
 \\usepackage{float}
 \\usepackage{wrapfig}

@@ -29,7 +29,8 @@
 ;;begin-endが何行はなれていたらendコメントを付加するか
     verilog-minimum-comment-distance 10
     verilog-indent-begin-after-if    t
-    verilog-auto-lineup              `all
+;;    verilog-auto-lineup              `all
+    verilog-auto-lineup              nil
     verilog-indent-lists             t
     verilog-highlight-modules        t
     verilog-highlight-p1800-keywords nil
@@ -43,7 +44,8 @@
     verilog-align-ifelse nil
     verilog-auto-declare-nettype nil
     verilog-auto-wire-type t
-    verilog-assignment-delay "#(2)"
+;    verilog-assignment-delay "#(2)"
+    verilog-assignment-delay ""
     verilog-auto-inst-param-value nil
     verilog-auto-inst-column 40
     verilog-auto-inst-interfaced-ports nil

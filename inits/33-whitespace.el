@@ -15,7 +15,7 @@
         ;; character ?\xBB at that column followed by a TAB which goes to
         ;; the next TAB column.
         ;; If this is a problem for you, please, comment the line below.
-        (tab-mark ?\t [?\u00BB ?\t] [?\\ ?\t])
+        ;;(tab-mark ?\t [?\u00BB ?\t] [?\\ ?\t])
 ))
 
 ;; スペースは全角のみを可視化

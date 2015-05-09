@@ -4,3 +4,4 @@
   '(lambda ()
    (font-lock-mode t)
    (setq indent-tabs-mode nil)    ; インデントはspace
+))
